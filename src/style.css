@@ -2,7 +2,7 @@ body {
   background-color: #f9f7fe;
   font-family: "Roboto", sans-serif;
 }
-.header {
+header {
   border-bottom: 1px solid #f9f7fe;
   padding: 0 0 30px 0;
   background-color: tomato;
