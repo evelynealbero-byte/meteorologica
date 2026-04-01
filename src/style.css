@@ -41,3 +41,10 @@ a {
   font-size: 16px;
   margin-left: 5px;
 }
+.weather-app-data {
+  display: flex;
+  justify-content: space-between;
+}
+main {
+  padding: 30px;
+}
