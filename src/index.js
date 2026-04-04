@@ -9,14 +9,15 @@ function refreshWeather(response) {
   let date = new Date(response.data.time * 1000);
 
   cityElement.innerHTML = response.data.city;
+
+  timeElement.innerHTML = formatDate(date);
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windSpeedElement.innerHTML = `${response.data.wind.speed} km/h`;
-  timeElement.innerHTML = formatDate(date);
+
   temperatureElement.innerHTML = Math.round(temperature);
 }
 function formatDate(date) {
-  let day = days[date.getDay()];
   let minutes = date.getMinutes();
   let hours = date.getHours();
   let days = [
@@ -28,7 +29,8 @@ function formatDate(date) {
     "Friday",
     "Saturday",
   ];
-  return `${day} ${hours} ${minutes}`;
+  let day = days[date.getDay()];
+  return `${day} ${hours}: ${minutes}`;
 }
 
 function searchCity(city) {
