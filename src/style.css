@@ -97,9 +97,9 @@ main {
   display: flex;
   justify-content: center;
   margin-top: 10px;
+  gap: 12px;
 }
 .weather-forecast-temperature {
   display: flex;
-  justify-content: space-between;
   margin-top: 20px;
 }
